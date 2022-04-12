@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load humanize %}
 
-{% block 'titulo' %}Inicio{% endblock 'titulo' %}
+{% block titulo %}Inicio{% endblock titulo %}
 
-{% block 'conteudo' %}
+{% block conteudo %}
     <div class="card-columns mt-4">
         {% for post in posts %}
             <div class="card">
@@ -38,4 +38,4 @@
         {% endfor %}
     </div>
     {% include 'parciais/_pagination.html' %}
-{% endblock 'conteudo' %}
+{% endblock conteudo %}

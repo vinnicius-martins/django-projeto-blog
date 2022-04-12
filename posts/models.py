@@ -3,6 +3,7 @@ from categorias.models import Categoria
 from django.contrib.auth.models import User
 from django.utils import timezone
 
+
 class Post(models.Model):
     titulo_post = models.CharField(max_length=255, verbose_name='Título')
     autor_post = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name='Autor')

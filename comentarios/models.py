@@ -3,7 +3,6 @@ from posts.models import Post
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-# Create your models here.
 
 class Comentario(models.Model):
     nome_comentario = models.CharField(max_length=150)

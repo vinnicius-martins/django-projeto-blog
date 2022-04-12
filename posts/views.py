@@ -10,7 +10,7 @@ class PostIndex(ListView):
     template_name = 'posts/index.html'
     paginate_by = 6
     context_object_name = 'posts'
-    
+
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.order_by('-id')
@@ -22,12 +22,16 @@ class PostIndex(ListView):
                 )
             )
         )
-        return qs    
+        return qs
+
+
 class PostCategoria(PostIndex):
     template_name = 'posts/post_categoria.html'
 
+
 class PostBusca(PostIndex):
     template_name = 'posts/post_busca.html'
+
 
 class PostDetalhes(UpdateView):
     pass
