@@ -62,6 +62,8 @@
                 {% for visible_field in form.visible_fields %}
                     {{ visible_field|as_crispy_field }}
                 {% endfor %}
+                <div class="g-recaptcha" data-sitekey="6LesbXAfAAAAAJU7YwwB_Z8FKwcLO42rIS6dbbyp"></div>
+                <br>
                 {% include 'parciais/_messages.html' %}
                 <input id="envia_comentario" type="submit" class="btn btn-primary" value="Enviar">
             </form>
