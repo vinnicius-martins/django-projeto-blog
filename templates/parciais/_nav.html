@@ -20,7 +20,7 @@
                     <a class="nav-link" href="{% url 'post_categorias' 'sistemas' %}">Sistemas</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0 ml-lg-4" action="{% url 'post_busca' %}/">
+            <form class="form-inline my-2 my-lg-0 ml-lg-4" action="{% url 'post_busca' %}" method="get" >
                 <input  name="termo" 
                         value="{{ request.GET.termo }}" 
                         class="form-control mr-sm-2" 
