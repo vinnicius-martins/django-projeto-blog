@@ -16,10 +16,11 @@ class PostIndex(ListView):
 
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related('categoria_post')
         qs = qs.order_by('-id')
         qs = qs.filter(publicado_post=True)
         qs = qs.annotate(
-            numero_comentarios = Count(
+            numero_comentarios=Count(
                 Case(
                     When(comentario__publicado_comentario=True, then=1)
                 )
