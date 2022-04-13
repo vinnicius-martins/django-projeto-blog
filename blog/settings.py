@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,5 @@ MESSAGE_TAGS = {
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 INSTALLED_APPS += ('django_summernote',)
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
